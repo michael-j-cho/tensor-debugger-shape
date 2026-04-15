@@ -1,0 +1,62 @@
+{
+  "name": "tensor-debugger-shape",
+  "displayName": "Tensor Debugger Shape",
+  "description": "Shows PyTorch tensor shapes and dtypes in the debugger variable window",
+  "publisher": "miccho",
+  "icon": "images/logo.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Debuggers"
+  ],
+  "activationEvents": [
+    "onDebug"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tensorDebuggerShape.inject",
+        "title": "Tensor Debugger Shape: Inject Patch"
+      }
+    ],
+    "configuration": {
+      "title": "Tensor Debugger Shape",
+      "properties": {
+        "tensorDebuggerShape.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable automatic tensor shape display in debugger"
+        },
+        "tensorDebuggerShape.autoInject": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically inject tensor repr patch when debugging Python"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "@types/node": "^16.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michael-j-cho/tensor-debugger-shape"
+  },
+  "keywords": [
+    "pytorch",
+    "tensor",
+    "debugger",
+    "debug",
+    "machine-learning",
+    "deep-learning"
+  ],
+  "author": "",
+  "license": "MIT"
+}
